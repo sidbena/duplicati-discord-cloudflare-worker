@@ -4,7 +4,8 @@ If you want to send notifications from your (self-hosted) [Duplicati](https://du
 
 ## Instructions
 
-1. Deploy this Cloudflare worker to your account
+1. Clone this repository and install the dependencies with `pnpm install`
+1. Deploy this Cloudflare worker to your account by running `pnpm run deploy`
 1. Create a webhook URL for a given Discord channel
 
    It will be in the following format:
