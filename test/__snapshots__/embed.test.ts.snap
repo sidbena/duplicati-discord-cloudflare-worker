@@ -1,0 +1,156 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`createEmbed > should return an embed for a valid Duplicati response 1`] = `
+{
+  "embeds": [
+    {
+      "author": {
+        "name": "Duplicati Discord Notification",
+      },
+      "color": 42301,
+      "fields": [
+        {
+          "inline": true,
+          "name": "Duration",
+          "value": "49 seconds",
+        },
+        {
+          "inline": true,
+          "name": "Files",
+          "value": "504",
+        },
+        {
+          "inline": true,
+          "name": "Size",
+          "value": "7.19 GB",
+        },
+        {
+          "inline": true,
+          "name": "Added Files",
+          "value": "0",
+        },
+        {
+          "inline": true,
+          "name": "Modified Files",
+          "value": "0",
+        },
+        {
+          "inline": true,
+          "name": "Deleted Files",
+          "value": "0",
+        },
+        {
+          "name": "Additional information",
+          "value": "Started: 2025-03-23 22:28:09 UTC
+Finished: 2025-03-23 22:28:59 UTC
+Interrupted: No",
+        },
+      ],
+      "footer": {
+        "text": "Operation: Backup | Machine Name: test-machine-name",
+      },
+      "title": ":white_check_mark: Test Backup Name",
+    },
+  ],
+}
+`;
+
+exports[`createEmbed > should return an embed for a warning 1`] = `
+{
+  "embeds": [
+    {
+      "author": {
+        "name": "Duplicati Discord Notification",
+      },
+      "color": 16009472,
+      "fields": [
+        {
+          "inline": true,
+          "name": "Duration",
+          "value": "49 seconds",
+        },
+        {
+          "inline": true,
+          "name": "Files",
+          "value": "204",
+        },
+        {
+          "inline": true,
+          "name": "Size",
+          "value": "7.19 GB",
+        },
+        {
+          "inline": true,
+          "name": "Added Files",
+          "value": "0",
+        },
+        {
+          "inline": true,
+          "name": "Modified Files",
+          "value": "0",
+        },
+        {
+          "inline": true,
+          "name": "Deleted Files",
+          "value": "0",
+        },
+        {
+          "name": "Additional information",
+          "value": "Started: 2025-03-23 22:28:09 UTC
+Finished: 2025-03-23 22:28:59 UTC
+Interrupted: No",
+        },
+      ],
+      "footer": {
+        "text": "Operation: Backup | Machine Name: test-machine-name",
+      },
+      "title": ":warning: Test Backup Name",
+    },
+  ],
+}
+`;
+
+exports[`createEmbed > should return an embed for an empty Data 1`] = `
+{
+  "embeds": [
+    {
+      "author": {
+        "name": "Duplicati Discord Notification",
+      },
+      "color": 15138827,
+      "description": "**Reason**: No data in response",
+      "title": ":fire: Unhandled Error",
+    },
+  ],
+}
+`;
+
+exports[`createEmbed > should return an embed for an exception 1`] = `
+{
+  "embeds": [
+    {
+      "author": {
+        "name": "Duplicati Discord Notification",
+      },
+      "color": 15138827,
+      "description": "**Exception**: Exception",
+      "title": ":fire: Unhandled Error",
+    },
+  ],
+}
+`;
+
+exports[`createEmbed > should return an embed for empty input 1`] = `
+{
+  "embeds": [
+    {
+      "author": {
+        "name": "Duplicati Discord Notification",
+      },
+      "color": 15138827,
+      "description": "**Reason**: No response from Duplicati",
+      "title": ":fire: Unhandled Error",
+    },
+  ],
+}
+`;
