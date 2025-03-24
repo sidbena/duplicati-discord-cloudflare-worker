@@ -1,6 +1,8 @@
 import { formatDate, formatDuration, prettyBytes } from './utils'
-import { enUS } from './localizations'
+import { getTranslation } from './localizations'
 import type { Embed, DuplicatiResponse, ParsedResult } from './types'
+
+const t = getTranslation()
 
 const ICONS: Record<ParsedResult, string> = {
   Success: ':white_check_mark:',
@@ -28,7 +30,7 @@ function unhandledError({ name, exception, reason }: { name?: string; exception?
     embeds: [
       {
         author: {
-          name: enUS.author.name,
+          name: t('author.name'),
         },
         title: `${ICONS.Fatal} ${name ? `${name}: ` : ''}Unhandled Error`,
         description: `${exception ? `**Exception**: ${exception}` : ''}${exception && reason ? '\n' : ''}${reason ? `**Reason**: ${reason}` : ''}`,
@@ -56,47 +58,47 @@ export function createEmbed(res: DuplicatiResponse): DiscordEmbed {
     embeds: [
       {
         author: {
-          name: enUS.author.name,
+          name: t('author.name'),
         },
         title: `${ICONS[Data.ParsedResult]} ${backupName}`,
         color: COLORS[Data.ParsedResult],
         footer: {
-          text: `${enUS.footer.operation}: ${operationName} | ${enUS.footer.machineName}: ${machineName}`
+          text: `${t('footer.operation')}: ${operationName} | ${t('footer.machineName')}: ${machineName}`
         },
         fields: [
           {
-            name: enUS.fields.duration,
+            name: t('fields.duration'),
             value: formatDuration(Data.Duration),
             inline: true
           },
           {
-            name: enUS.fields.files,
+            name: t('fields.files'),
             value: Data.ExaminedFiles.toString(),
             inline: true
           },
           {
-            name: enUS.fields.size,
+            name: t('fields.size'),
             value: prettyBytes(Data.SizeOfExaminedFiles),
             inline: true
           },
           {
-            name: enUS.fields.addedFiles,
+            name: t('fields.addedFiles'),
             value: Data.AddedFiles.toString(),
             inline: true
           },
           {
-            name: enUS.fields.modifiedFiles,
+            name: t('fields.modifiedFiles'),
             value: Data.ModifiedFiles.toString(),
             inline: true
           },
           {
-            name: enUS.fields.deletedFiles,
+            name: t('fields.deletedFiles'),
             value: Data.DeletedFiles.toString(),
             inline: true
           },
           {
-            name: enUS.fields.additionalInformation,
-            value: `${enUS.states.started}: ${formatDate(Data.BeginTime)}\n${enUS.states.finished}: ${formatDate(Data.EndTime)}\n${enUS.states.interrupted}: ${Data.Interrupted ? enUS.boolean.yes : enUS.boolean.no}`
+            name: t('fields.additionalInformation'),
+            value: `${t('states.started')}: ${formatDate(Data.BeginTime)}\n${t('states.finished')}: ${formatDate(Data.EndTime)}\n${t('states.interrupted')}: ${Data.Interrupted ? t('boolean.yes') : t('boolean.no')}`
           }
         ]
       }
