@@ -14,7 +14,7 @@ If you want to send notifications from your (self-hosted) [Duplicati](https://du
    https://discord.com/api/webhooks/123/abcdef
    ```
    
-   If you want to support threads, create one in Discord then copy the link to it by right-clicking it. The link will be in the form of `https://discord.com/channels/123/987`. Copy the last part after the slash ('/') - that's your `thread_id`.
+   If you want to support threads, create a thread in Discord first, then copy the link to it by right-clicking it and choose `Copy Link`. The link will be in the form of `https://discord.com/channels/123/987`. Extract the last part after the slash ('/') - that's your `thread_id`.
 
    Copy the `123/abcdef` or `123/abcdef?thread_id=987` portion to your clipboard.
 
