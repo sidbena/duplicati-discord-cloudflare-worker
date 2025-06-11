@@ -13,8 +13,10 @@ If you want to send notifications from your (self-hosted) [Duplicati](https://du
    ```shell
    https://discord.com/api/webhooks/123/abcdef
    ```
+   
+   If you want to support threads, create one in Discord then copy the link to it by right-clicking it. The link will be in the form of `https://discord.com/channels/123/987`. Copy the last part after the slash ('/') - that's your `thread_id`.
 
-   Copy the `123/abcdef` portion to your clipboard.
+   Copy the `123/abcdef` or `123/abcdef?thread_id=987` portion to your clipboard.
 
 1. Open your Duplicati dashboard and select **"Edit"** on the backup you wish to receive notifications for. Navigate to **"Options"** and under **"Advanced options"** click the three dots to **"Edit as text"**.
 
@@ -22,6 +24,12 @@ If you want to send notifications from your (self-hosted) [Duplicati](https://du
 
    ```text
    --send-http-json-urls=https://url-to-your-worker.com/123/abcdef
+   ```
+   
+   or, for thread support
+
+   ```text
+   --send-http-json-urls=https://url-to-your-worker.com/123/abcdef?thread_id=987654321
    ```
 
 1. Save the backup configuration. Run a backup and check if it's working.
