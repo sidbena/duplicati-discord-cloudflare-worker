@@ -4,7 +4,7 @@ If you want to send notifications from your (self-hosted) [Duplicati](https://du
 
 ## Instructions
 
-### 1. Mostly automatic
+### 1. [Mostly automatic](https://developers.cloudflare.com/workers/platform/deploy-buttons/)
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/sidbena/duplicati-discord-cloudflare-worker/tree/main)
 
