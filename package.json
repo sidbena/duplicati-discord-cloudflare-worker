@@ -12,15 +12,15 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
-    "hono": "^4.7.5"
+    "hono": "^4.12.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.11.0",
-    "@cloudflare/vitest-pool-workers": "^0.8.4",
-    "@cloudflare/workers-types": "^4.20250321.0",
+    "@antfu/eslint-config": "^7.6.1",
+    "@cloudflare/vitest-pool-workers": "^0.12.18",
+    "@cloudflare/workers-types": "^4.20260301.1",
     "eslint": "^9.23.0",
-    "eslint-plugin-format": "^1.0.1",
-    "vitest": "^3.0.9",
-    "wrangler": "^4.4.0"
+    "eslint-plugin-format": "^2.0.1",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.69.0"
   }
 }
