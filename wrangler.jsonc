@@ -2,5 +2,15 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "duplicati-discord-cloudflare-worker",
   "main": "src/index.ts",
-  "compatibility_date": "2025-03-20"
+  "compatibility_date": "2025-03-20",
+
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true
+    }
+  }
 }
